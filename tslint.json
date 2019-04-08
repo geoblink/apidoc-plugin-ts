@@ -1,11 +1,3 @@
 {
-  "extends": "tslint:recommended",
-  "rules": {
-    "quotemark": [
-      true,
-      "single"
-    ],
-    "interface-name": [true, "never-prefix"],
-    "no-console": [false]
-  }
+  "extends": "tslint-config-standard"
 }
