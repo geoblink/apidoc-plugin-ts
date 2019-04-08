@@ -66,6 +66,8 @@ export interface InnerSquare extends Square {
   bottomLength: number
 }
 
+export interface ShapedSkill extends Skill, Shape { }
+
 export interface TeamPicks {
   id: number
   picks: TeamPick[]
@@ -117,15 +119,15 @@ export interface SearchResult {
 }
 
 export namespace CustomNamespace {
-  interface HiddenInterface {
+  interface InternalInterface {
     internal_id: string
   }
 
-  export interface PublicInterface extends HiddenInterface {
+  export interface PublicInterface extends InternalInterface {
     public_id: string
   }
 
-  export interface ComposedInterface extends CustomNamespace.PublicInterface {
+  export interface ComposedInterface extends PublicInterface {
     name: string
   }
 }

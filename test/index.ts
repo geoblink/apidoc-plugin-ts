@@ -56,6 +56,16 @@ export function deepExternalInterfaceTest () {
 /**
  * @api {get} /api/:id
  * @apiParam {Number} id Unique ID.
+ * @apiInterface (./test/interfaces.ts) {ShapedSkill}
+ * @apiGroup multipleInheritanceTest
+ */
+export function multipleInheritanceTest () {
+  return false
+}
+
+/**
+ * @api {get} /api/:id
+ * @apiParam {Number} id Unique ID.
  * @apiInterface (./test/interfaces.ts) {CustomNamespace.ComposedInterface}
  * @apiGroup namespacedInterfaceTest
  */
