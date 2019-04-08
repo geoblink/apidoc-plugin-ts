@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import 'mocha';
+import 'mocha'
 
 /*tslint:disable*/
 const fixtureJson = require('./fixture.json')

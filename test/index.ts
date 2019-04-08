@@ -1,6 +1,6 @@
 interface SquareConfig {
-    color: string
-    width: number
+  color: string
+  width: number
 }
 
 /**
@@ -9,8 +9,8 @@ interface SquareConfig {
  * @apiInterface {SquareConfig}
  * @apiGroup localInterfaceTest
  */
-export function localInterfaceTest(): SquareConfig {
-  return {color: 'red', width: 20}
+export function localInterfaceTest (): SquareConfig {
+  return { color: 'red', width: 20 }
 }
 
 /**
@@ -19,7 +19,7 @@ export function localInterfaceTest(): SquareConfig {
  * @apiInterface (./test/interfaces.ts) { InnerSquare }
  * @apiGroup extendInterfaceTest
  */
-export function extendInterfaceTest() {
+export function extendInterfaceTest () {
   return false
 }
 
@@ -29,7 +29,7 @@ export function extendInterfaceTest() {
  * @apiInterface (./test/interfaces.ts) { Employer }
  * @apiGroup importedInterfaceTest
  */
-export function importedInterfaceTest() {
+export function importedInterfaceTest () {
   return false
 }
 
@@ -39,7 +39,7 @@ export function importedInterfaceTest() {
  * @apiInterface (./test/interfaces.ts) { TeamPicks }
  * @apiGroup deepExtendsInterfaceTest
  */
-export function deepExtendsInterfaceTest() {
+export function deepExtendsInterfaceTest () {
   return false
 }
 
@@ -49,7 +49,7 @@ export function deepExtendsInterfaceTest() {
  * @apiInterface (./test/interfaces.ts) { SearchResult }
  * @apiGroup deepExternalInterfaceTest
  */
-export function deepExternalInterfaceTest() {
+export function deepExternalInterfaceTest () {
   return false
 }
 
@@ -59,6 +59,6 @@ export function deepExternalInterfaceTest() {
  * @apiInterface {X}
  * @apiGroup notFoundTest
  */
-export function notFoundTest() {
+export function notFoundTest () {
   return false
 }

@@ -22,13 +22,12 @@ namespace Apidoc {
   }
 
   export type ParserFindElementsHookCallback = (
-    elements: Apidoc.Element[],
-    element: Apidoc.Element,
+    elements: Element[],
+    element: Element,
     block: string,
     filename: string
   ) => void
 }
-
 
 const ast = new Ast()
 
@@ -300,8 +299,8 @@ function getApiSuccessElement (param: string | number): ApidocsElement {
     content: `${param}\n`,
     name: 'apisuccess',
     source: `@apiSuccess ${param}\n`,
-    sourceName: 'apiSuccess',
-  };
+    sourceName: 'apiSuccess'
+  }
 }
 
 function getInterface (interfacePath: string, interfaceName: string): InterfaceDeclaration | undefined {
