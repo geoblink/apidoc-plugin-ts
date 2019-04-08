@@ -598,6 +598,46 @@
         }]
       }
     },
+    "success": {
+      "fields": {
+        "Success 200": [{
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "public_id",
+            "description": "<p><code>public_id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p><code>name</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "namespacedInterfaceTest",
+    "version": "0.0.0",
+    "filename": "test/index.ts",
+    "groupTitle": "namespacedInterfaceTest",
+    "name": "GetApiId"
+  },
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [{
+          "group": "Parameter",
+          "type": "Number",
+          "optional": false,
+          "field": "id",
+          "description": "<p>Unique ID.</p>"
+        }]
+      }
+    },
     "group": "notFoundTest",
     "version": "0.0.0",
     "filename": "test/index.ts",

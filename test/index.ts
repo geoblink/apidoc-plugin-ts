@@ -56,6 +56,16 @@ export function deepExternalInterfaceTest () {
 /**
  * @api {get} /api/:id
  * @apiParam {Number} id Unique ID.
+ * @apiInterface (./test/interfaces.ts) {CustomNamespace.ComposedInterface}
+ * @apiGroup namespacedInterfaceTest
+ */
+export function namespacedInterfaceTest () {
+  return false
+}
+
+/**
+ * @api {get} /api/:id
+ * @apiParam {Number} id Unique ID.
  * @apiInterface {X}
  * @apiGroup notFoundTest
  */

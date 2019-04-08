@@ -115,3 +115,17 @@ export interface SearchResult {
     avatar: string
   }
 }
+
+export namespace CustomNamespace {
+  interface HiddenInterface {
+    internal_id: string
+  }
+
+  export interface PublicInterface extends HiddenInterface {
+    public_id: string
+  }
+
+  export interface ComposedInterface extends CustomNamespace.PublicInterface {
+    name: string
+  }
+}

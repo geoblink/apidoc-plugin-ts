@@ -1,9 +1,9 @@
 import * as ts from 'typescript'
-import Ast, { InterfaceDeclaration, PropertySignature, Symbol, SourceFile } from 'ts-morph'
+import Ast, { InterfaceDeclaration, PropertySignature, Symbol, SourceFile, NamespaceDeclaration } from 'ts-morph'
 
 export const APIDOC_PLUGIN_TS_CUSTOM_ELEMENT_NAME = 'apiinterface'
 
-const definitionFilesAddedByUser = {}
+const definitionFilesAddedByUser: {[key: string]: boolean} = {}
 
 namespace Apidoc {
   export enum AvailableHook {
@@ -54,7 +54,7 @@ function parseElements (elements: Apidoc.Element[], element: Apidoc.Element, blo
   elements.pop()
 
   // Create array of new elements
-  const newElements: ApidocsElement[] = []
+  const newElements: Apidoc.Element[] = []
 
   // Get object values
   const values = parse(element.content)
@@ -72,12 +72,10 @@ function parseElements (elements: Apidoc.Element[], element: Apidoc.Element, blo
   const interfacePath = values.path ? values.path.trim() : filename
 
   // Does the interface exist in current file?
-  const matchedInterface = getInterface(interfacePath, namedInterface)
+  const matchedInterface = getInterface.call(this, interfacePath, namedInterface)
 
   // If interface is not found, log error
   if (!matchedInterface) {
-    // throw new Error(`Could not find interface «${namedInterface}» in file «${interfacePath}»`)
-
     this.log.warn(`Could not find interface «${namedInterface}» in file «${interfacePath}»`)
     return
   }
@@ -125,7 +123,7 @@ function parse (content: string): ParseResult | null {
 function setInterfaceElements (
   matchedInterface: InterfaceDeclaration,
   filename: string,
-  newElements: ApidocsElement[],
+  newElements: Apidoc.Element[],
   values: ParseResult,
   inttype?: string
 ) {
@@ -159,7 +157,7 @@ function setInterfaceElements (
     // If property is an object or interface then we need to also display the objects properties
     if (propTypeIsObject) {
       // First determine if the object is an available interface
-      const typeInterface = getInterface(filename, propType.replace('[]', ''))
+      const typeInterface = getInterface.call(this, filename, propType)
 
       const arrayType = isArray && prop.getType().getArrayType()
       const objectProperties = arrayType
@@ -181,7 +179,7 @@ function setInterfaceElements (
 function setObjectElements<NodeType extends ts.Node = ts.Node> (
   properties: Symbol[],
   filename: string,
-  newElements: ApidocsElement[],
+  newElements: Apidoc.Element[],
   values: ParseResult,
   typeDef: string
 ) {
@@ -212,7 +210,7 @@ function setObjectElements<NodeType extends ts.Node = ts.Node> (
     newElements.push(newElement)
 
     // If property is an object or interface then we need to also display the objects properties
-    const typeInterface = getInterface(filename, propType)
+    const typeInterface = getInterface.call(this, filename, propType)
 
     if (typeInterface) {
       setInterfaceElements.call(this, typeInterface, filename, newElements, values, typeDefLabel)
@@ -268,7 +266,7 @@ function setObjectElements<NodeType extends ts.Node = ts.Node> (
 function extendInterface (
   matchedInterface: InterfaceDeclaration,
   interfacePath: string,
-  newElements: ApidocsElement[],
+  newElements: Apidoc.Element[],
   values: ParseResult,
   inttype?: string
 ) {
@@ -276,7 +274,7 @@ function extendInterface (
   if (!extendedInterface) return
 
   const extendedInterfaceName = extendedInterface.compilerNode.expression.getText()
-  const matchedExtendedInterface = getInterface(interfacePath, extendedInterfaceName)
+  const matchedExtendedInterface = getInterface.call(this, interfacePath, extendedInterfaceName)
 
   if (!matchedExtendedInterface) {
     this.log.warn(`Could not find interface to be extended ${extendedInterfaceName}`)
@@ -287,14 +285,7 @@ function extendInterface (
   setInterfaceElements.call(this, matchedExtendedInterface, interfacePath, newElements, values, inttype)
 }
 
-interface ApidocsElement {
-  content: string
-  name: string
-  source: string
-  sourceName: string
-}
-
-function getApiSuccessElement (param: string | number): ApidocsElement {
+function getApiSuccessElement (param: string | number): Apidoc.Element {
   return {
     content: `${param}\n`,
     name: 'apisuccess',
@@ -312,7 +303,28 @@ function getInterface (interfacePath: string, interfaceName: string): InterfaceD
     trackUserAddedDefinitionFile(file)
   }
 
-  return interfaceFile.getInterface(interfaceName)
+  const isNamespacedInterface = interfaceName.match(/(?:[a-zA-Z0-9_]\.)*[a-zA-Z0-9_]\./i)
+
+  const interfaceNameSegments = isNamespacedInterface
+    ? interfaceName.replace('[]', '').split('.')
+    : [interfaceName]
+
+  const namespaces = interfaceNameSegments.slice(0, -1)
+  const plainInterfaceName = interfaceNameSegments[interfaceNameSegments.length - 1]
+
+  const namespace = namespaces.reduce(
+    (parent: SourceFile | NamespaceDeclaration | undefined, name: string) => {
+      if (!parent) return
+      const namespace = parent.getNamespace(name)
+      if (!namespace) this.log.warn(`Could not find namespace ${name} in file ${interfacePath}`)
+      return namespace
+    },
+    interfaceFile
+  )
+
+  if (!namespace) return
+
+  return namespace.getInterface(plainInterfaceName)
 }
 
 function trackUserAddedDefinitionFile (file: SourceFile) {
