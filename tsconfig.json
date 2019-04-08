@@ -12,18 +12,11 @@
     "noUnusedLocals": false,
     "removeComments": true,
     "sourceMap": false,
-    "strictNullChecks": false,
-    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": true,
     "target": "es5",
     "lib": [
       "es2016",
       "dom"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "node"
     ]
   }
 }

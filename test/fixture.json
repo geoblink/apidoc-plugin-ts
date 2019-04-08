@@ -1,1 +1,607 @@
-[  {    "type": "get",    "url": "/api/:id",    "title": "",    "parameter": {      "fields": {        "Parameter": [          {            "group": "Parameter",            "type": "Number",            "optional": false,            "field": "id",            "description": "<p>Unique ID.</p>"          }        ]      }    },    "success": {      "fields": {        "Success 200": [          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "id",            "description": "<p>id</p>"          },          {            "group": "Success 200",            "type": "Object[]",            "optional": false,            "field": "picks",            "description": "<p>picks</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "picks.id",            "description": "<p>picks &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "picks.webName",            "description": "<p>picks &gt; webName</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "picks.stats",            "description": "<p>picks &gt; stats</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "picks.stats.totalGoals",            "description": "<p>picks.stats &gt; totalGoals</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "picks.stats.timesBenched",            "description": "<p>picks.stats &gt; timesBenched</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "picks.stats.timesCaptained",            "description": "<p>picks.stats &gt; timesCaptained</p>"          }        ]      }    },    "group": "deepExtendsInterfaceTest",    "version": "0.0.0",    "filename": "test/index.ts",    "groupTitle": "deepExtendsInterfaceTest",    "name": "GetApiId"  },  {    "type": "get",    "url": "/api/:id",    "title": "",    "parameter": {      "fields": {        "Parameter": [          {            "group": "Parameter",            "type": "Number",            "optional": false,            "field": "id",            "description": "<p>Unique ID.</p>"          }        ]      }    },    "success": {      "fields": {        "Success 200": [          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "data",            "description": "<p>data</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.id",            "description": "<p>data &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.category",            "description": "<p>data &gt; category</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.content",            "description": "<p>data &gt; content</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.name",            "description": "<p>data &gt; name</p>"          },          {            "group": "Success 200",            "type": "Date",            "optional": false,            "field": "data.createdAt",            "description": "<p>data &gt; createdAt</p>"          },          {            "group": "Success 200",            "type": "Date",            "optional": false,            "field": "data.updatedAt",            "description": "<p>data &gt; updatedAt</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.userId",            "description": "<p>data &gt; userId</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.organizationId",            "description": "<p>data &gt; organizationId</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.workspaceId",            "description": "<p>data &gt; workspaceId</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.referenceId",            "description": "<p>data &gt; referenceId</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "data.referenceType",            "description": "<p>data &gt; referenceType</p>"          },          {            "group": "Success 200",            "type": "Any",            "optional": false,            "field": "data.ext",            "description": "<p>data &gt; ext</p>"          },          {            "group": "Success 200",            "type": "Any",            "optional": false,            "field": "highlight",            "description": "<p>highlight</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "org",            "description": "<p>org</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "org.id",            "description": "<p>org &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "org.fullname",            "description": "<p>org &gt; fullname</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "workspace",            "description": "<p>workspace</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "workspace.id",            "description": "<p>workspace &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "workspace.fullname",            "description": "<p>workspace &gt; fullname</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "parentMission",            "description": "<p>parentMission</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "parentMission.id",            "description": "<p>parentMission &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "parentMission.title",            "description": "<p>parentMission &gt; title</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "ref",            "description": "<p>ref</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "ref.id",            "description": "<p>ref &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "ref.title",            "description": "<p>ref &gt; title</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "room",            "description": "<p>room</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "room._id",            "description": "<p>room &gt; _id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "room.id",            "description": "<p>room &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "room.name",            "description": "<p>room &gt; name</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "user",            "description": "<p>user</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "user.id",            "description": "<p>user &gt; id</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "user.nickname",            "description": "<p>user &gt; nickname</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "user.avatar",            "description": "<p>user &gt; avatar</p>"          }        ]      }    },    "group": "deepExternalInterfaceTest",    "version": "0.0.0",    "filename": "test/index.ts",    "groupTitle": "deepExternalInterfaceTest",    "name": "GetApiId"  },  {    "type": "get",    "url": "/api/:id",    "title": "",    "parameter": {      "fields": {        "Parameter": [          {            "group": "Parameter",            "type": "Number",            "optional": false,            "field": "id",            "description": "<p>Unique ID.</p>"          }        ]      }    },    "success": {      "fields": {        "Success 200": [          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "color",            "description": "<p>color</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "radius",            "description": "<p>radius</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "sideLength",            "description": "<p>sideLength</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "bottomLength",            "description": "<p>bottomLength</p>"          }        ]      }    },    "group": "extendInterfaceTest",    "version": "0.0.0",    "filename": "test/index.ts",    "groupTitle": "extendInterfaceTest",    "name": "GetApiId"  },  {    "type": "get",    "url": "/api/:id",    "title": "",    "parameter": {      "fields": {        "Parameter": [          {            "group": "Parameter",            "type": "Number",            "optional": false,            "field": "id",            "description": "<p>Unique ID.</p>"          }        ]      }    },    "success": {      "fields": {        "Success 200": [          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "jobTitle",            "description": "<p>The job title string</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "person",            "description": "<p>The IPerson Interface</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "person.name",            "description": "<p>person &gt; The name of the person</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "person.age",            "description": "<p>person &gt; The age of the person</p>"          },          {            "group": "Success 200",            "type": "Date",            "optional": false,            "field": "person.dateOfBirth",            "description": "<p>person &gt; dateOfBirth</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "person.address",            "description": "<p>person &gt; The Address Object</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "person.address.address_line_1",            "description": "<p>person &gt; address &gt; Address line 1</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "person.address.postcode",            "description": "<p>person &gt; address &gt; Postcode</p>"          },          {            "group": "Success 200",            "type": "Location",            "optional": false,            "field": "person.address.location",            "description": "<p>person &gt; address &gt; Location</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "person.address.location.country",            "description": "<p>person.address.location &gt; Country</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "person.address.location.city",            "description": "<p>person.address.location &gt; city</p>"          },          {            "group": "Success 200",            "type": "Object",            "optional": false,            "field": "person.address.location.region",            "description": "<p>person.address.location &gt; region</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "person.address.location.region.a",            "description": "<p>person &gt; address &gt; location &gt; region &gt; a</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "person.address.location.region.b",            "description": "<p>person &gt; address &gt; location &gt; region &gt; b prop</p>"          },          {            "group": "Success 200",            "type": "Object[]",            "optional": false,            "field": "skills",            "description": "<p>An array of ISkill interfaces</p>"          },          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "skills.description",            "description": "<p>skills &gt; description</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "skills.level",            "description": "<p>skills &gt; level</p>"          }        ]      }    },    "group": "importedInterfaceTest",    "version": "0.0.0",    "filename": "test/index.ts",    "groupTitle": "importedInterfaceTest",    "name": "GetApiId"  },  {    "type": "get",    "url": "/api/:id",    "title": "",    "parameter": {      "fields": {        "Parameter": [          {            "group": "Parameter",            "type": "SquareConfig",            "optional": false,            "field": "id",            "description": "<p>Unique ID.</p>"          }        ]      }    },    "success": {      "fields": {        "Success 200": [          {            "group": "Success 200",            "type": "String",            "optional": false,            "field": "color",            "description": "<p>color</p>"          },          {            "group": "Success 200",            "type": "Number",            "optional": false,            "field": "width",            "description": "<p>width</p>"          }        ]      }    },    "group": "localInterfaceTest",    "version": "0.0.0",    "filename": "test/index.ts",    "groupTitle": "localInterfaceTest",    "name": "GetApiId"  },  {    "type": "get",    "url": "/api/:id",    "title": "",    "parameter": {      "fields": {        "Parameter": [          {            "group": "Parameter",            "type": "Number",            "optional": false,            "field": "id",            "description": "<p>Unique ID.</p>"          }        ]      }    },    "group": "notFoundTest",    "version": "0.0.0",    "filename": "test/index.ts",    "groupTitle": "notFoundTest",    "name": "GetApiId"  }]
+[{
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [{
+          "group": "Parameter",
+          "type": "Number",
+          "optional": false,
+          "field": "id",
+          "description": "<p>Unique ID.</p>"
+        }]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [{
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p><code>id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "picks",
+            "description": "<p><code>picks</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "picks.id",
+            "description": "<p><code>picks.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "picks.webName",
+            "description": "<p><code>picks.webName</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "picks.stats",
+            "description": "<p><code>picks.stats</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "picks.stats.totalGoals",
+            "description": "<p><code>picks.stats.totalGoals</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "picks.stats.timesBenched",
+            "description": "<p><code>picks.stats.timesBenched</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "picks.stats.timesCaptained",
+            "description": "<p><code>picks.stats.timesCaptained</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "deepExtendsInterfaceTest",
+    "version": "0.0.0",
+    "filename": "test/index.ts",
+    "groupTitle": "deepExtendsInterfaceTest",
+    "name": "GetApiId"
+  },
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [{
+          "group": "Parameter",
+          "type": "Number",
+          "optional": false,
+          "field": "id",
+          "description": "<p>Unique ID.</p>"
+        }]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [{
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p><code>data</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.id",
+            "description": "<p><code>data.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.category",
+            "description": "<p><code>data.category</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.content",
+            "description": "<p><code>data.content</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.name",
+            "description": "<p><code>data.name</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.createdAt",
+            "description": "<p><code>data.createdAt</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.updatedAt",
+            "description": "<p><code>data.updatedAt</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.userId",
+            "description": "<p><code>data.userId</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.organizationId",
+            "description": "<p><code>data.organizationId</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.workspaceId",
+            "description": "<p><code>data.workspaceId</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.referenceId",
+            "description": "<p><code>data.referenceId</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.referenceType",
+            "description": "<p><code>data.referenceType</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Any",
+            "optional": false,
+            "field": "data.ext",
+            "description": "<p><code>data.ext</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Any",
+            "optional": false,
+            "field": "highlight",
+            "description": "<p><code>highlight</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "org",
+            "description": "<p><code>org</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "org.id",
+            "description": "<p><code>org.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "org.fullname",
+            "description": "<p><code>org.fullname</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "workspace",
+            "description": "<p><code>workspace</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "workspace.id",
+            "description": "<p><code>workspace.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "workspace.fullname",
+            "description": "<p><code>workspace.fullname</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "parentMission",
+            "description": "<p><code>parentMission</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "parentMission.id",
+            "description": "<p><code>parentMission.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "parentMission.title",
+            "description": "<p><code>parentMission.title</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "ref",
+            "description": "<p><code>ref</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "ref.id",
+            "description": "<p><code>ref.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "ref.title",
+            "description": "<p><code>ref.title</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "room",
+            "description": "<p><code>room</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "room._id",
+            "description": "<p><code>room._id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "room.id",
+            "description": "<p><code>room.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "room.name",
+            "description": "<p><code>room.name</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "user",
+            "description": "<p><code>user</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "user.id",
+            "description": "<p><code>user.id</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "user.nickname",
+            "description": "<p><code>user.nickname</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "user.avatar",
+            "description": "<p><code>user.avatar</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "deepExternalInterfaceTest",
+    "version": "0.0.0",
+    "filename": "test/index.ts",
+    "groupTitle": "deepExternalInterfaceTest",
+    "name": "GetApiId"
+  },
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [{
+          "group": "Parameter",
+          "type": "Number",
+          "optional": false,
+          "field": "id",
+          "description": "<p>Unique ID.</p>"
+        }]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [{
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "color",
+            "description": "<p><code>color</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "radius",
+            "description": "<p><code>radius</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "sideLength",
+            "description": "<p><code>sideLength</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "bottomLength",
+            "description": "<p><code>bottomLength</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "extendInterfaceTest",
+    "version": "0.0.0",
+    "filename": "test/index.ts",
+    "groupTitle": "extendInterfaceTest",
+    "name": "GetApiId"
+  },
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [{
+          "group": "Parameter",
+          "type": "Number",
+          "optional": false,
+          "field": "id",
+          "description": "<p>Unique ID.</p>"
+        }]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [{
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "jobTitle",
+            "description": "<p><code>jobTitle</code> - The job title string</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "person",
+            "description": "<p><code>person</code> - The IPerson Interface</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "person.name",
+            "description": "<p><code>person.name</code> - The name of the person</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "person.age",
+            "description": "<p><code>person.age</code> - The age of the person</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "person.dateOfBirth",
+            "description": "<p><code>person.dateOfBirth</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "person.address",
+            "description": "<p><code>person.address</code> - The Address Object</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "person.address.address_line_1",
+            "description": "<p><code>person.address.address_line_1</code> - Address line 1</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "person.address.postcode",
+            "description": "<p><code>person.address.postcode</code> - Postcode</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "person.address.location",
+            "description": "<p><code>person.address.location</code> - Location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "person.address.location.country",
+            "description": "<p><code>person.address.location.country</code> - Country</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "person.address.location.city",
+            "description": "<p><code>person.address.location.city</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "person.address.location.region",
+            "description": "<p><code>person.address.location.region</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "person.address.location.region.a",
+            "description": "<p><code>person.address.location.region.a</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "person.address.location.region.b",
+            "description": "<p><code>person.address.location.region.b</code> - b prop</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "skills",
+            "description": "<p><code>skills</code> - An array of ISkill interfaces</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.description",
+            "description": "<p><code>skills.description</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "skills.level",
+            "description": "<p><code>skills.level</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "importedInterfaceTest",
+    "version": "0.0.0",
+    "filename": "test/index.ts",
+    "groupTitle": "importedInterfaceTest",
+    "name": "GetApiId"
+  },
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [{
+          "group": "Parameter",
+          "type": "SquareConfig",
+          "optional": false,
+          "field": "id",
+          "description": "<p>Unique ID.</p>"
+        }]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [{
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "color",
+            "description": "<p><code>color</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "width",
+            "description": "<p><code>width</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "localInterfaceTest",
+    "version": "0.0.0",
+    "filename": "test/index.ts",
+    "groupTitle": "localInterfaceTest",
+    "name": "GetApiId"
+  },
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [{
+          "group": "Parameter",
+          "type": "Number",
+          "optional": false,
+          "field": "id",
+          "description": "<p>Unique ID.</p>"
+        }]
+      }
+    },
+    "group": "notFoundTest",
+    "version": "0.0.0",
+    "filename": "test/index.ts",
+    "groupTitle": "notFoundTest",
+    "name": "GetApiId"
+  }
+]

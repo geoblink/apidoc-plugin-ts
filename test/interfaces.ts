@@ -1,4 +1,4 @@
-import { Location, SearchAttributes } from './interfaces2';
+import { Location, SearchAttributes } from './interfaces2'
 
 export interface Employer {
   /**
