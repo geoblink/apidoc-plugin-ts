@@ -311,7 +311,7 @@ function getInterface (interfacePath: string, interfaceName: string): InterfaceD
     trackUserAddedDefinitionFile(file)
   }
 
-  return getNamespacedInterface(interfaceFile, interfaceName)
+  return getNamespacedInterface.call(this, interfaceFile, interfaceName)
 }
 
 function getNamespacedInterface (
