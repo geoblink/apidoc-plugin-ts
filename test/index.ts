@@ -1,6 +1,6 @@
 interface SquareConfig {
-    color: string;
-    width: number;
+    color: string
+    width: number
 }
 
 /**
@@ -10,7 +10,7 @@ interface SquareConfig {
  * @apiGroup localInterfaceTest
  */
 export function localInterfaceTest(): SquareConfig {
-  return {color: 'red', width: 20};
+  return {color: 'red', width: 20}
 }
 
 /**
@@ -20,7 +20,7 @@ export function localInterfaceTest(): SquareConfig {
  * @apiGroup extendInterfaceTest
  */
 export function extendInterfaceTest() {
-  return false;
+  return false
 }
 
 /**
@@ -30,7 +30,7 @@ export function extendInterfaceTest() {
  * @apiGroup importedInterfaceTest
  */
 export function importedInterfaceTest() {
-  return false;
+  return false
 }
 
 /**
@@ -40,7 +40,7 @@ export function importedInterfaceTest() {
  * @apiGroup deepExtendsInterfaceTest
  */
 export function deepExtendsInterfaceTest() {
-  return false;
+  return false
 }
 
 /**
@@ -50,7 +50,7 @@ export function deepExtendsInterfaceTest() {
  * @apiGroup deepExternalInterfaceTest
  */
 export function deepExternalInterfaceTest() {
-  return false;
+  return false
 }
 
 /**
@@ -60,5 +60,5 @@ export function deepExternalInterfaceTest() {
  * @apiGroup notFoundTest
  */
 export function notFoundTest() {
-  return false;
+  return false
 }
