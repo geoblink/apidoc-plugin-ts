@@ -12,4 +12,5 @@ cache:
     - node_modules
 
 script:
+  - yarn lint
   - yarn test
