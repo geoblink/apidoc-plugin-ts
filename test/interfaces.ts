@@ -131,3 +131,8 @@ export namespace CustomNamespace {
     name: string
   }
 }
+
+export interface GenericInterface<T> {
+  name: string
+  value: T
+}

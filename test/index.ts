@@ -73,6 +73,19 @@ export function namespacedInterfaceTest () {
   return false
 }
 
+/*
+// This is not supported yet.
+//
+//  * @api {get} /api/:id
+//  * @apiParam {Number} id Unique ID.
+//  * @apiInterface (./test/interfaces.ts) {GenericInterface<boolean>}
+//  * @apiGroup genericInterfaceTest
+//
+// export function genericInterfaceTest () {
+//   return false
+// }
+*/
+
 /**
  * @api {get} /api/:id
  * @apiParam {Number} id Unique ID.
