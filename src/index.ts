@@ -351,7 +351,7 @@ function getCapitalized (text: string): string {
 }
 
 function isNativeType (propType: string): boolean {
-  const nativeTypes = ['boolean', 'string', 'number', 'Date', 'any']
+  const nativeTypes = ['boolean', 'Boolean', 'string', 'String', 'number', 'Number', 'Date', 'any']
   return nativeTypes.indexOf(propType) >= 0
 }
 
