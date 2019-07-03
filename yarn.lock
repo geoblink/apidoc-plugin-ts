@@ -332,10 +332,12 @@ cliui@^4.0.0:
     strip-ansi "^4.0.0"
     wrap-ansi "^2.0.0"
 
-code-block-writer@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/code-block-writer/-/code-block-writer-8.0.0.tgz#bc59193040b51a3e9a9150fe12da09dc74ca2a95"
-  integrity sha512-M/9eGfXHPAKBlLfcFzjvU4aKf+shHvNrFqJjI2/4A5jpY7MVgk8566FAWfWIYo/PXLZWtID91LsXOjX31rG8dQ==
+code-block-writer@9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/code-block-writer/-/code-block-writer-9.4.0.tgz#99f835317ed56b61775f64f862aa87704d27a4d4"
+  integrity sha512-EVlBZXymEGS0OgR0OaEX2mRgZmeH8T5B+wDHiLwYGZ69PjlRRiHeNy/TP80s5lZH8ztKtTrSxb90CiyYvzQ2jQ==
+  dependencies:
+    chai "^4.2.0"
 
 code-point-at@^1.0.0:
   version "1.1.0"
@@ -2280,13 +2282,13 @@ triple-beam@^1.2.0, triple-beam@^1.3.0:
   resolved "https://registry.yarnpkg.com/triple-beam/-/triple-beam-1.3.0.tgz#a595214c7298db8339eeeee083e4d10bd8cb8dd9"
   integrity sha512-XrHUvV5HpdLmIj4uVMxHggLbFSZYIn7HEWsqePZcI50pco+MPqJ50wMGY794X7AOOhxOBAjbkqfAbEe/QMp2Lw==
 
-ts-morph@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/ts-morph/-/ts-morph-2.3.0.tgz#d7b2c061b2392e5ea91f8d08997ec5da42ec36e6"
-  integrity sha512-odfmlA1J045teLJ5W25U9Hfg662O7mswDkBWqIhxMaAyslUFftLEn3SIiaCgB1jsQzYApYhMTXkjLXxS3/jdeg==
+ts-morph@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ts-morph/-/ts-morph-3.1.0.tgz#233a1588b910096ca70ec494ce6ffca8b356aea5"
+  integrity sha512-lowDc/6QrCsLZkjreCGXQKFoUlRj70VeC/jvsXO2EW9OrwutX5OToa1Vi9AC6wzv86XXnQjzQuDb5X62wJyJaQ==
   dependencies:
     "@dsherret/to-absolute-glob" "^2.0.2"
-    code-block-writer "8.0.0"
+    code-block-writer "9.4.0"
     fs-extra "^7.0.0"
     glob-parent "^3.1.0"
     globby "^8.0.1"
