@@ -12,9 +12,9 @@
     "lint": "tslint --project tsconfig.json",
     "test": "yarn test-no-compile",
     "test-no-compile": "cd test && mocha test.ts --opts='./mocha.opts'; cd ..",
-    "prepare": "rm -rf dist && tsc -p src/tsconfig.json",
-    "prepublishOnly": "run-s prepare lint test",
-    "pretest": "rm -rf test/out && run-s prepare copy:plugin"
+    "build": "rm -rf dist && tsc -p src/tsconfig.json",
+    "prepublishOnly": "run-s build lint test",
+    "pretest": "rm -rf test/out && run-s build copy:plugin"
   },
   "authors": [
     "Tom Grey",
