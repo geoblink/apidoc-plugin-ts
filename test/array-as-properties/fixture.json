@@ -1,0 +1,102 @@
+[
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "SquareConfig",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Unique ID.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "squares",
+            "description": "<p><code>squares</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "squares.color",
+            "description": "<p><code>squares.color</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "squares.width",
+            "description": "<p><code>squares.width</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "arrayAsInterface",
+    "version": "0.0.0",
+    "filename": "array-as-properties/index.ts",
+    "groupTitle": "arrayAsInterface",
+    "name": "GetApiId"
+  },
+  {
+    "type": "get",
+    "url": "/api/:id",
+    "title": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "SquareConfig",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Unique ID.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "squares",
+            "description": "<p><code>squares</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "squares.color",
+            "description": "<p><code>squares.color</code></p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "squares.width",
+            "description": "<p><code>squares.width</code></p>"
+          }
+        ]
+      }
+    },
+    "group": "arrayGenericsTest",
+    "version": "0.0.0",
+    "filename": "array-as-properties/index.ts",
+    "groupTitle": "arrayGenericsTest",
+    "name": "GetApiId"
+  }
+]

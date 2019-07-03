@@ -1,6 +1,6 @@
 {
   "name": "@geoblink/apidoc-plugin-ts",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A plugin for apidoc leveraging TypeScript interfaces.",
   "main": "dist/index.js",
   "files": [
@@ -8,12 +8,13 @@
   ],
   "scripts": {
     "apidoc": "apidoc -i test/ -o test/out",
-    "copy:plugin": "rm -rf node_modules/apidoc-plugin-ts && copyfiles package.json './dist/**/*' node_modules/apidoc-plugin-ts/",
+    "copy:plugin": "rm -rf node_modules/apidoc-plugin-ts && ln -s ../../ node_modules/apidoc-plugin-ts",
     "lint": "tslint --project tsconfig.json",
-    "test": "mocha test/**/test.ts",
-    "prepare": "rm -rf dist && tsc -p src/tsconfig.json",
-    "prepublishOnly": "run-s prepare lint test",
-    "pretest": "rm -rf test/out && run-s prepare copy:plugin apidoc"
+    "test": "yarn test-no-compile",
+    "test-no-compile": "cd test && mocha test.ts --opts='./mocha.opts'; cd ..",
+    "build": "rm -rf dist && tsc -p src/tsconfig.json",
+    "prepublishOnly": "run-s build lint test",
+    "pretest": "rm -rf test/out && run-s build copy:plugin"
   },
   "authors": [
     "Tom Grey",
@@ -41,7 +42,7 @@
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
-    "@types/node": "^11.13.0",
+    "@types/node": "^12.0.0",
     "apidoc": "^0.17.7",
     "chai": "^4.2.0",
     "copyfiles": "^2.1.0",
@@ -52,7 +53,7 @@
     "tslint-config-standard": "^8.0.1"
   },
   "dependencies": {
-    "ts-morph": "1.3.3",
-    "typescript": "3.4.2"
+    "ts-morph": "3.1.0",
+    "typescript": "3.5.2"
   }
 }

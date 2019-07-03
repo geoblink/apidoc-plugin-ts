@@ -76,7 +76,7 @@
     },
     "group": "deepExtendsInterfaceTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "deepExtendsInterfaceTest",
     "name": "GetApiId"
   },
@@ -340,7 +340,7 @@
     },
     "group": "deepExternalInterfaceTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "deepExternalInterfaceTest",
     "name": "GetApiId"
   },
@@ -394,7 +394,7 @@
     },
     "group": "extendInterfaceTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "extendInterfaceTest",
     "name": "GetApiId"
   },
@@ -539,7 +539,7 @@
     },
     "group": "importedInterfaceTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "importedInterfaceTest",
     "name": "GetApiId"
   },
@@ -579,7 +579,7 @@
     },
     "group": "localInterfaceTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "localInterfaceTest",
     "name": "GetApiId"
   },
@@ -633,7 +633,7 @@
     },
     "group": "multipleInheritanceTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "multipleInheritanceTest",
     "name": "GetApiId"
   },
@@ -680,7 +680,7 @@
     },
     "group": "namespacedInterfaceTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "namespacedInterfaceTest",
     "name": "GetApiId"
   },
@@ -701,7 +701,7 @@
     },
     "group": "notFoundTest",
     "version": "0.0.0",
-    "filename": "test/index.ts",
+    "filename": "test1/index.ts",
     "groupTitle": "notFoundTest",
     "name": "GetApiId"
   }

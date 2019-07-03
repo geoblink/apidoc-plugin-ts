@@ -1,5 +1,6 @@
 import * as ts from 'typescript'
-import Ast, { InterfaceDeclaration, PropertySignature, Symbol, SourceFile, NamespaceDeclaration } from 'ts-morph'
+import * as path from 'path'
+import { Project as Ast, InterfaceDeclaration, PropertySignature, Symbol, SourceFile, NamespaceDeclaration } from 'ts-morph'
 
 export const APIDOC_PLUGIN_TS_CUSTOM_ELEMENT_NAME = 'apiinterface'
 
@@ -69,8 +70,7 @@ function parseElements (elements: Apidoc.Element[], element: Apidoc.Element, blo
   const namedInterface = values.interface.trim()
 
   // Get the file path to the interface
-  const interfacePath = values.path ? values.path.trim() : filename
-
+  const interfacePath = values.path ? path.resolve(path.dirname(filename), values.path.trim()) : filename
   // Does the interface exist in current file?
   const matchedInterface = getInterface.call(this, interfacePath, namedInterface)
 
@@ -159,7 +159,7 @@ function setInterfaceElements (
       // First determine if the object is an available interface
       const typeInterface = getInterface.call(this, filename, propType)
 
-      const arrayType = isArray && prop.getType().getArrayType()
+      const arrayType = isArray && prop.getType().getArrayElementType()
       const objectProperties = arrayType
         ? arrayType.getProperties()
         : prop.getType().getProperties()
